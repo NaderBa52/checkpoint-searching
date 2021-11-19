@@ -1,0 +1,21 @@
+PROCEDURE swap ( a,b:Integer)
+VAR
+    aux:Integer
+BEGIN
+    aux:=a 
+    a:=b 
+    b:=aux
+END
+ALGORITHM insert
+VAR
+    t : ARRAY_OF Integer[100]
+    i,j :Integer
+BEGIN
+    FOR i FROM 0 TO t.length-1 STEP 1  DO
+        j:=i
+        WHILE (j>0 and t[j]>t[j-1])
+        swap(t[j],t[j-1])
+        j:=j-1
+        END_WHILE
+    END_FOR
+END
